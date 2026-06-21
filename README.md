@@ -31,17 +31,19 @@ foto-kita-blur-tiktok/
 
 ## 🚀 Instalasi & Menjalankan
 
+> ⚠️ **Penting:** gunakan **Python 3.11 atau 3.12**. MediaPipe belum stabil di Python versi terbaru (3.13/3.14) dan bisa menyebabkan error `module 'mediapipe' has no attribute 'solutions'`.
+
 1. **Clone repository**
    ```bash
-   git clone https://github.com/kristianNatalis/foto-kita-blur-tiktok-.git
+   git clone https://github.com/USERNAME/foto-kita-blur-tiktok.git
    cd foto-kita-blur-tiktok
    ```
 
-2. **Buat virtual environment (opsional, direkomendasikan)**
+2. **Buat virtual environment** (wajib pakai Python 3.11/3.12)
    ```bash
-   python -m venv venv
-   source venv/bin/activate      # Linux / macOS
+   py -3.12 -m venv venv
    venv\Scripts\activate         # Windows
+   source venv/bin/activate      # Linux / macOS
    ```
 
 3. **Install dependency**
@@ -54,6 +56,19 @@ foto-kita-blur-tiktok/
    python main.py
    ```
 
+### 🛠️ Troubleshooting
+
+**Error `module 'mediapipe' has no attribute 'solutions'`**
+Ini terjadi kalau versi MediaPipe atau Python yang dipakai tidak kompatibel. Pastikan:
+- Pakai Python 3.11 atau 3.12 (bukan 3.13/3.14)
+- Versi dependency sesuai `requirements.txt` (sudah di-pin ke versi yang stabil)
+
+Kalau masih error meski sudah pakai Python yang benar, reset environment-nya:
+```bash
+pip uninstall mediapipe numpy opencv-python opencv-contrib-python -y
+pip install -r requirements.txt
+```
+
 ## 🎮 Kontrol
 
 | Tombol | Fungsi               |
@@ -64,9 +79,11 @@ foto-kita-blur-tiktok/
 
 ## 🛠️ Teknologi
 
-- [OpenCV](https://opencv.org/) — pemrosesan video & tampilan kamera
-- [MediaPipe](https://developers.google.com/mediapipe) — deteksi landmark tangan
+- [OpenCV](https://opencv.org/) `4.10.0` — pemrosesan video & tampilan kamera
+- [MediaPipe](https://developers.google.com/mediapipe) `0.10.14` — deteksi landmark tangan
 - [Pygame](https://www.pygame.org/) — pemutaran audio
+
+> Versi MediaPipe & OpenCV sengaja di-pin (dikunci) di `requirements.txt` karena versi terbaru MediaPipe punya bug yang menghilangkan modul `mp.solutions`.
 
 ## 📄 Lisensi
 
