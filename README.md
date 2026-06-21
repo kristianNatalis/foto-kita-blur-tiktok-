@@ -36,7 +36,7 @@ foto-kita-blur-tiktok/
 1. **Clone repository**
    ```bash
    git clone https://github.com/USERNAME/foto-kita-blur-tiktok.git
-   cd foto-kita-blur-tiktok
+   cd foto-kita-blur-tiktok-
    ```
 
 2. **Buat virtual environment** (wajib pakai Python 3.11/3.12)
