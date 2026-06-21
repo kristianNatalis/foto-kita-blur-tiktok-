@@ -83,7 +83,7 @@ pip install -r requirements.txt
 - [MediaPipe](https://developers.google.com/mediapipe) `0.10.14` — deteksi landmark tangan
 - [Pygame](https://www.pygame.org/) — pemutaran audio
 
-> Versi MediaPipe & OpenCV sengaja di-pin (dikunci) di `requirements.txt` karena versi terbaru MediaPipe punya bug yang menghilangkan modul `mp.solutions`.
+
 
 ## 📄 Lisensi
 
